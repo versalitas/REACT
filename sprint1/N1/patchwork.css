@@ -1,0 +1,184 @@
+:root {
+--container-color:black;
+--dkblue:#00008B;
+--yellow:gold ;
+--orange:#FFA500;
+--coral:#FA8072;
+--ltblue:#B0E0E6;
+--blue:#87CEEB;
+}
+
+
+body {
+    background: whitesmoke;
+    width: 1200px;
+    display:flex;
+    flex-direction:column;
+   
+}
+
+header, main, footer {
+    background: var(--container-color);
+    padding:10px;
+    margin:10px;
+    display:flex;
+}
+
+header{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.header-top {
+    background: var(--dkblue);
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap:5px;
+    padding:10px;
+    margin:5px;
+   
+}
+
+.header-top div {
+    background: var(--coral);
+    padding: 10px; 
+    margin: 10px;
+}
+
+
+
+.header-bottom {
+    background: var(--orange);
+    padding:10px;
+    margin:10px;
+    
+}
+
+
+.header-bottom div {
+    background: var(--yellow);
+    padding: 10px; 
+    margin:10px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items:stretch;
+}
+
+.main-left {
+    background: var(--dkblue);
+    padding: 10px; 
+    margin:10px;
+    width: 50%;
+    display: flex; 
+    flex-direction: column;
+}
+
+
+
+article {
+   display: flex;
+   flex-direction:row;
+   justify-content: flex-start;
+   flex-wrap:wrap;
+   
+}
+
+article div {
+    background: var(--ltblue);
+    width: calc(50% - 40px); 
+}
+
+.main-left div {
+    background: var(--blue);
+    padding: 10px; 
+    margin:10px;
+}
+
+.main-right {
+    background: var(--coral);
+    padding: 10px; 
+    margin:10px;
+    width: 50%;
+
+}
+
+.main-right div {
+    background: var(--yellow);
+    padding: 10px; 
+    margin: 10px;
+
+}
+
+
+
+
+footer {
+    background: var(--container-color);
+}
+
+footer div {
+    background: var(--yellow);
+    padding: 10px; 
+    margin: 10px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        width:100%;
+    }
+   
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        background: var(--yellow);
+    }
+
+    .main-right, .main-left {
+
+        width: calc(100% - 40px);
+    }
+    
+
+ }
+
+ @media screen and (min-width: 320px) and (max-width: 480px) {
+    
+    body {
+        width:100%;
+    }
+
+    .header-top {
+        display: flex; 
+        flex-direction: column;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .main-left, .main-right {
+        width: calc(100% - 40px);
+    }
+
+    article {
+        display: flex; 
+        flex-direction: column;
+        
+    }
+    
+    article div {
+        width: calc(100% - 40px);
+    }
+
+}
