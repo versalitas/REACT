@@ -2,9 +2,10 @@
 --base-color: whitesmoke;
 --coral:coral;
 --pink: pink;
---grey: rgba(180, 180, 180, 0.6);
+--grey-60: rgba(180, 180, 180, 0.6);
 font-size: 16px;
 font-family: 'EB Garamond', serif;
+color: darkgray;
 
 --container-color:black;
 --dkblue:#00008B;
@@ -80,22 +81,34 @@ i {
     padding-right: 0.5rem;
 }
 
-.header-bottom {
+.social-media {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media i {
+   margin-bottom: 1rem;
+   margin-right: 0.5rem;
+}
+
+.header-bottom  {
     background: var(--grey);
-    margin: auto 20%;
-   
+    margin: auto 6rem;
+    
 }
 
 .header-bottom h1 {
-    
-    color: var(--coral);
-    margin: 2rem auto 5.5rem auto;
-   
-    text-align: center;
-   
+   color: var(--coral);
+   opacity: 0.8;
+   margin: 1.2rem auto 6rem auto;
+   text-align: center;
 }
 
-
+header li:hover{
+    color: var(--coral);
+}
 
 
 /* MAIN */
