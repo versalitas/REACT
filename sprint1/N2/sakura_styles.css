@@ -27,14 +27,10 @@ body {
 
 /* HEADER */
 
-main, footer {
-    padding:10px;
-    margin:10px;
-    display:flex;
-}
 
 header{
     background-image: url("./images/header_cropped.jpg");
+    background-size: cover;
     background-position: center;
     background-color: pink;
     display: flex;
@@ -94,7 +90,7 @@ i {
 }
 
 .header-bottom  {
-    background: var(--grey);
+    background: var(--grey-60);
     margin: auto 6rem;
     
 }
@@ -117,10 +113,13 @@ main {
     display: flex;
     flex-direction: row;
     align-items:stretch;
+    padding:0.8rem;
+    margin:0.8rem;
+    
 }
 
 .main-left {
-    background: var(--dkblue);
+   
     padding: 10px; 
     margin:10px;
     width: 50%;
@@ -135,12 +134,22 @@ article {
    flex-direction:row;
    justify-content: flex-start;
    flex-wrap:wrap;
-   
+}
+
+.article-image img {
+ 
+  display:block;
+  height:auto;
+  transform:translate(-50%,-50%);
+  width:auto;
+  min-width:100%;
 }
 
 article div {
-    background: var(--ltblue);
+    background-color:red;
     width: calc(50% - 40px); 
+    display: flex;
+    flex-direction: column;
 }
 
 .main-left div {
@@ -169,6 +178,9 @@ article div {
 
 footer {
     background: var(--container-color);
+    padding:0.8rem;
+    margin:0.8rem;
+    
 }
 
 footer div {
@@ -185,7 +197,33 @@ footer div {
     body {
         width:100%;
     }
+    
+    header {
+        background-image: url("./images/header_tablet.jpg");
+    }
    
+
+    #header-logo {
+        width: 2rem; 
+    }
+    
+
+    .header-top {
+        display:flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content: space-around;
+        margin-bottom: 4rem;
+    }
+    
+
+
+    .header-top div {
+        padding: 10px; 
+        margin: 10px;
+    }    
+
+
 
     main {
         display: flex;
@@ -203,6 +241,7 @@ footer div {
  }
 
  @media screen and (min-width: 320px) and (max-width: 480px) {
+   
     
     body {
         width:100%;
@@ -211,8 +250,13 @@ footer div {
     .header-top {
         display: flex; 
         flex-direction: column;
+        
     }
-    
+
+    #header-logo {
+        width: 2rem; 
+    }
+
     main {
         display: flex;
         flex-direction: column;
